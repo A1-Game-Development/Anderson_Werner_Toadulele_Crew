@@ -9,7 +9,31 @@ EditorBuildSettings:
     path: Assets/Scenes/Title Screen.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/Village 3 Far West.unity
+    path: Assets/Scenes/Village 3, Anderson/Outer Far West.unity
     guid: d61fde75706ab684bbeac8ef048aca44
+  - enabled: 1
+    path: Assets/Scenes/Village 3, Anderson/Outer West.unity
+    guid: dc3878b9f3b325c4db570780a9306cee
+  - enabled: 1
+    path: Assets/Scenes/Village 3, Anderson/West Gate.unity
+    guid: 5c5254802c67d5343a0b7fd160008788
+  - enabled: 1
+    path: Assets/Scenes/Village 3, Anderson/Inner Far West.unity
+    guid: c53958c69bee02f409fb9bfd497aa275
+  - enabled: 1
+    path: Assets/Scenes/Village 3, Anderson/Inner West.unity
+    guid: 7a1a5f9978d1d96469932054a45abc18
+  - enabled: 1
+    path: Assets/Scenes/Village 3, Anderson/Town Square.unity
+    guid: b65f3e5ec7a08dd4c90ad5bdf4775143
+  - enabled: 1
+    path: Assets/Scenes/Village 3, Anderson/South.unity
+    guid: 21ec665dbc8c75741b95d76479eb171b
+  - enabled: 1
+    path: Assets/Scenes/Village 3, Anderson/Far South.unity
+    guid: 35c0c3108b43d9d49bc8fac41dc1a311
+  - enabled: 1
+    path: Assets/Scenes/Village 3, Anderson/Inner North.unity
+    guid: 16fd100d84f5640409083444913ccd62
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
