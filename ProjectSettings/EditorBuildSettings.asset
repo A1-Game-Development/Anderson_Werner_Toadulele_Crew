@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Title Screen.unity
+    path: Assets/Scenes/Other Scenes/Title Screen.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/Village 3, Anderson/Outer Far West.unity
@@ -35,5 +35,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Village 3, Anderson/Inner North.unity
     guid: 16fd100d84f5640409083444913ccd62
+  - enabled: 1
+    path: Assets/Scenes/Village 3, Anderson/FIVE PEBBLES.unity
+    guid: ab5771236b9b90b4eaad0ce0ef55d1de
+  - enabled: 1
+    path: Assets/Scenes/Other Scenes/Testing.unity
+    guid: 5573f4e4a874c2749b091a91dab4a9d2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
