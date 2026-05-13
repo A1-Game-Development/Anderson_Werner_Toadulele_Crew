@@ -5,40 +5,27 @@ using System.Collections.Generic;
 
 public class NPCDialogue : NPCBase
 {
+    [Header("NPC Identity")]
+    public string npcID; // UNIQUE per NPC (IMPORTANT)
+
     [Header("UI")]
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
 
     [Header("Dialogue")]
-    [Tooltip("Name of the text file inside Resources")]
-    public string dialogueFileName = "NPCDialogue";
+    public string dialogueFileName = "";
 
-    [Tooltip("Current dialogue state")]
-    public string currentState = "Introduction";
+    [Tooltip("Which dialogue block should play first")]
+    public string currentState = "";
 
-    [Header("Typing Settings")]
+    [Header("Settings")]
     public float typingSpeed = 0.03f;
-
-    [Tooltip("Extra pause after punctuation")]
-    public float punctuationPause = 0.15f;
-
-    [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip typingSound;
-
-    [Tooltip("Delay between typing sounds")]
-    public float typingSoundDelay = 0.02f;
-
-    [Header("Smooth Dialogue")]
-    public bool useFade = true;
-    public CanvasGroup dialogueCanvasGroup;
-    public float fadeSpeed = 8f;
 
     private bool playerInRange = false;
     private bool isTyping = false;
     private bool canPress = true;
-
-    private float lastSoundTime;
 
     private Dictionary<string, string[]> dialogueLines =
         new Dictionary<string, string[]>();
@@ -46,22 +33,46 @@ public class NPCDialogue : NPCBase
     private int currentLineIndex = 0;
     private string[] currentLines;
 
-    private Coroutine typingCoroutine;
+    // GLOBAL REGISTRY
+    private static Dictionary<string, NPCDialogue> npcRegistry =
+        new Dictionary<string, NPCDialogue>();
 
-    void Start()
+    void Awake()
     {
-        LoadDialogue();
+        // register NPC
+        if (!string.IsNullOrEmpty(npcID))
+        {
+            if (!npcRegistry.ContainsKey(npcID))
+                npcRegistry.Add(npcID, this);
+            else
+                npcRegistry[npcID] = this;
+        }
 
-        if (dialoguePanel != null)
-            dialoguePanel.SetActive(false);
-
-        if (dialogueCanvasGroup != null)
-            dialogueCanvasGroup.alpha = 0f;
+        // LOAD saved state from JSON
+        string savedState = NPCSaveSystem.GetState(npcID);
+        if (!string.IsNullOrEmpty(savedState))
+        {
+            currentState = savedState;
+        }
     }
 
-    // --------------------------------
-    // INTERACT
-    // --------------------------------
+    public static NPCDialogue GetNPC(string id)
+    {
+        if (npcRegistry.ContainsKey(id))
+            return npcRegistry[id];
+
+        return null;
+    }
+
+    public static void SetNPCState(string id, string newState)
+    {
+        NPCDialogue npc = GetNPC(id);
+        if (npc != null)
+        {
+            npc.SetState(newState);
+        }
+    }
+
     public override void HandleInteract()
     {
         if (!playerInRange) return;
@@ -73,7 +84,9 @@ public class NPCDialogue : NPCBase
         }
         else if (isTyping)
         {
-            SkipTyping();
+            StopAllCoroutines();
+            dialogueText.text = currentLines[currentLineIndex];
+            isTyping = false;
         }
         else
         {
@@ -86,25 +99,22 @@ public class NPCDialogue : NPCBase
     IEnumerator InputCooldown()
     {
         canPress = false;
-
-        yield return new WaitForSeconds(0.15f);
-
+        yield return new WaitForSeconds(0.2f);
         canPress = true;
     }
 
-    // --------------------------------
-    // LOAD DIALOGUE FILE
-    // --------------------------------
+    void Start()
+    {
+        LoadDialogue();
+
+        if (dialoguePanel != null)
+            dialoguePanel.SetActive(false);
+    }
+
     void LoadDialogue()
     {
-        TextAsset textFile =
-            Resources.Load<TextAsset>(dialogueFileName);
-
-        if (textFile == null)
-        {
-            Debug.LogError("Dialogue file NOT FOUND: " + dialogueFileName);
-            return;
-        }
+        TextAsset textFile = Resources.Load<TextAsset>(dialogueFileName);
+        if (textFile == null) return;
 
         string[] lines = textFile.text.Split('\n');
 
@@ -122,168 +132,61 @@ public class NPCDialogue : NPCBase
         }
     }
 
-    // --------------------------------
-    // START DIALOGUE
-    // --------------------------------
     void StartDialogue()
     {
         if (!dialogueLines.ContainsKey(currentState))
-        {
-            Debug.LogError("Missing dialogue state: " + currentState);
             return;
-        }
 
         dialoguePanel.SetActive(true);
-
         currentLineIndex = 0;
         currentLines = dialogueLines[currentState];
 
-        if (useFade && dialogueCanvasGroup != null)
-        {
-            StopAllCoroutines();
-            StartCoroutine(FadeCanvas(1f));
-        }
-
-        typingCoroutine = StartCoroutine(TypeLine());
+        StartCoroutine(TypeLine());
     }
 
-    // --------------------------------
-    // NEXT LINE
-    // --------------------------------
     void NextLine()
     {
         currentLineIndex++;
 
         if (currentLineIndex < currentLines.Length)
-        {
-            typingCoroutine = StartCoroutine(TypeLine());
-        }
+            StartCoroutine(TypeLine());
         else
-        {
             EndDialogue();
-        }
     }
 
-    // --------------------------------
-    // TYPEWRITER EFFECT
-    // --------------------------------
     IEnumerator TypeLine()
     {
         isTyping = true;
-
         dialogueText.text = "";
 
-        string line = currentLines[currentLineIndex];
-
-        foreach (char c in line)
+        foreach (char c in currentLines[currentLineIndex])
         {
             dialogueText.text += c;
 
-            PlayTypingSound();
+            if (typingSound && audioSource)
+                audioSource.PlayOneShot(typingSound);
 
-            float delay = typingSpeed;
-
-            if (c == '.' || c == ',' || c == '!' || c == '?')
-                delay += punctuationPause;
-
-            yield return new WaitForSeconds(delay);
+            yield return new WaitForSeconds(typingSpeed);
         }
 
         isTyping = false;
     }
 
-    // --------------------------------
-    // SKIP TYPING
-    // --------------------------------
-    void SkipTyping()
-    {
-        if (typingCoroutine != null)
-            StopCoroutine(typingCoroutine);
-
-        dialogueText.text = currentLines[currentLineIndex];
-
-        isTyping = false;
-    }
-
-    // --------------------------------
-    // TYPING SOUND
-    // --------------------------------
-    void PlayTypingSound()
-    {
-        if (typingSound == null || audioSource == null)
-            return;
-
-        if (Time.time - lastSoundTime < typingSoundDelay)
-            return;
-
-        audioSource.PlayOneShot(typingSound);
-
-        lastSoundTime = Time.time;
-    }
-
-    // --------------------------------
-    // END DIALOGUE
-    // --------------------------------
     void EndDialogue()
     {
-        if (useFade && dialogueCanvasGroup != null)
-        {
-            StartCoroutine(CloseDialogueSmooth());
-        }
-        else
-        {
-            dialoguePanel.SetActive(false);
-        }
-    }
-
-    IEnumerator CloseDialogueSmooth()
-    {
-        yield return FadeCanvas(0f);
-
         dialoguePanel.SetActive(false);
     }
 
-    IEnumerator FadeCanvas(float target)
-    {
-        while (!Mathf.Approximately(dialogueCanvasGroup.alpha, target))
-        {
-            dialogueCanvasGroup.alpha =
-                Mathf.MoveTowards(
-                    dialogueCanvasGroup.alpha,
-                    target,
-                    fadeSpeed * Time.deltaTime
-                );
-
-            yield return null;
-        }
-    }
-
-    // --------------------------------
-    // CHANGE STATES ANYTIME
-    // --------------------------------
     public void SetState(string newState)
     {
         currentState = newState;
 
-        Debug.Log(name + " state changed to: " + newState);
+        if (!string.IsNullOrEmpty(npcID))
+        {
+            NPCSaveSystem.SetState(npcID, newState);
+        }
     }
 
-    // --------------------------------
-    // OPTIONAL HELPERS
-    // --------------------------------
-    public void StartState(string newState)
-    {
-        SetState(newState);
-
-        if (dialoguePanel.activeSelf)
-            EndDialogue();
-
-        StartDialogue();
-    }
-
-    // --------------------------------
-    // PLAYER DETECTION
-    // --------------------------------
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -310,17 +213,8 @@ public class NPCDialogue : NPCBase
             if (player != null)
                 player.currentNPC = null;
 
-            StopAllCoroutines();
-
             if (dialoguePanel != null)
-            {
                 dialoguePanel.SetActive(false);
-
-                if (dialogueCanvasGroup != null)
-                    dialogueCanvasGroup.alpha = 0f;
-            }
-
-            isTyping = false;
         }
     }
 }

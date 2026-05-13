@@ -18,15 +18,16 @@ public class PlayerController : MonoBehaviour
     private Vector2 inputVelocity;
 
     private Vector2 lastDirection = Vector2.down;
+    private Vector2 animDirection = Vector2.down;
 
     [HideInInspector] public NPCBase currentNPC;
 
-
+    // -----------------------------
+    // PERSISTENCE
+    // -----------------------------
     public static Vector2 savedLastDirection = Vector2.down;
     public static Vector2 entryDirection = Vector2.zero;
     public static string spawnOverride = "";
-
-    private static bool hasSpawnedOnce = false;
 
     void Awake()
     {
@@ -41,20 +42,16 @@ public class PlayerController : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-
-        Debug.Log("[PlayerController] Awake complete");
     }
 
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-        Debug.Log("[PlayerController] Enabled + sceneLoaded subscribed");
     }
 
     void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
-        Debug.Log("[PlayerController] Disabled + sceneLoaded unsubscribed");
     }
 
     // -----------------------------
@@ -63,48 +60,28 @@ public class PlayerController : MonoBehaviour
     void OnMove(InputValue value)
     {
         rawInput = value.Get<Vector2>();
-        Debug.Log("[PlayerController] Move input: " + rawInput);
     }
 
     // -----------------------------
-    // INTERACT (OPTION A)
+    // INTERACT
     // -----------------------------
     public void OnInteract(InputValue value)
     {
-        Debug.Log("[PlayerController] OnInteract triggered");
-
         if (currentNPC != null)
-        {
-            Debug.Log("[PlayerController] NPC found ? sending interact");
             currentNPC.HandleInteract();
-        }
-        else
-        {
-            Debug.Log("[PlayerController] No NPC in range");
-        }
     }
 
-        // -----------------------------
+    // -----------------------------
     // EXIT DIRECTION
     // -----------------------------
     public void SetExitDirection()
     {
         entryDirection = lastDirection;
-        Debug.Log("[PlayerController] SetExitDirection: " + entryDirection);
     }
 
     // -----------------------------
-    // FORCE SPAWN RESET
+    // UPDATE
     // -----------------------------
-    public void ForceSpawnReset()
-    {
-        entryDirection = Vector2.zero;
-        spawnOverride = "";
-        hasSpawnedOnce = false;
-
-        Debug.Log("[PlayerController] ForceSpawnReset called");
-    }
-
     void Update()
     {
         smoothedInput = Vector2.SmoothDamp(
@@ -121,11 +98,17 @@ public class PlayerController : MonoBehaviour
 
         if (moveInput != Vector2.zero)
         {
-            lastDirection = moveInput;
-            savedLastDirection = moveInput;
+            lastDirection = moveInput.normalized;
+            savedLastDirection = lastDirection;
+            animDirection = lastDirection;
         }
 
+        animator.SetFloat("MoveX", moveInput.x);
+        animator.SetFloat("MoveY", moveInput.y);
         animator.SetFloat("Speed", smoothedInput.sqrMagnitude);
+
+        animator.SetFloat("LastMoveX", animDirection.x);
+        animator.SetFloat("LastMoveY", animDirection.y);
     }
 
     void FixedUpdate()
@@ -133,40 +116,73 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = smoothedInput * movementSpeed;
     }
 
+    // -----------------------------
+    // SCENE LOAD
+    // -----------------------------
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("[PlayerController] Scene loaded: " + scene.name);
-
         Transform spawn = GetSpawnPoint();
 
         if (spawn != null)
-        {
             transform.position = spawn.position;
-            Debug.Log("[PlayerController] Spawned at: " + spawn.name);
-        }
         else
-        {
-            Debug.LogWarning("[PlayerController] Spawn point missing!");
-        }
+            Debug.LogWarning("[Spawn] No spawn found!");
     }
 
+    // -----------------------------
+    // ?? FIXED SPAWN SYSTEM
+    // -----------------------------
     Transform GetSpawnPoint()
     {
         string spawnName = "Spawn_Default";
+
+        // ---------------------------------------
+        // 1. OVERRIDE SPAWN (HIGHEST PRIORITY)
+        // ---------------------------------------
+        if (!string.IsNullOrEmpty(spawnOverride))
+        {
+            spawnName = spawnOverride;
+            spawnOverride = ""; // consume once
+        }
+        // ---------------------------------------
+        // 2. DIRECTIONAL SPAWNS
+        // ---------------------------------------
+        else
+        {
+            if (entryDirection == Vector2.up)
+                spawnName = "Spawn_FromDown";
+            else if (entryDirection == Vector2.down)
+                spawnName = "Spawn_FromUp";
+            else if (entryDirection == Vector2.left)
+                spawnName = "Spawn_FromRight";
+            else if (entryDirection == Vector2.right)
+                spawnName = "Spawn_FromLeft";
+        }
+
+        // ---------------------------------------
+        // 3. FIND SPAWN OBJECT
+        // ---------------------------------------
         GameObject obj = GameObject.Find(spawnName);
 
         if (obj == null)
         {
-            Debug.LogWarning("[PlayerController] Cannot find spawn: " + spawnName);
+            Debug.LogWarning("[Spawn] Missing spawn: " + spawnName);
             return null;
         }
 
+        Debug.Log("[Spawn] Using: " + spawnName);
         return obj.transform;
     }
 
+    // -----------------------------
+    // STABLE IDLE HANDLING
+    // -----------------------------
     void LateUpdate()
     {
-        animator.SetFloat("LastMoveX", lastDirection.x);
-        animator.SetFloat("LastMoveY", lastDirection.y);
+        if (rawInput.magnitude < 0.2f)
+        {
+            animator.SetFloat("LastMoveX", animDirection.x);
+            animator.SetFloat("LastMoveY", animDirection.y);
+        }
     }
 }

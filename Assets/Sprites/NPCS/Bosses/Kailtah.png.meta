@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: fdbd75b103edbdd4abeba37b67dc5a5a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7079739248241767731
+    second: Kailtah_0
+  - first:
+      213: -1720568329235577230
+    second: Kailtah_1
+  - first:
+      213: -8048741985432252886
+    second: Kailtah_2
+  - first:
+      213: -6890585086217456906
+    second: Kailtah_3
+  - first:
+      213: 1310830805621757137
+    second: Kailtah_4
+  - first:
+      213: 1929632364910327112
+    second: Kailtah_5
+  - first:
+      213: -1027827227123608800
+    second: Kailtah_6
+  - first:
+      213: 3767627435943838840
+    second: Kailtah_7
+  - first:
+      213: 6279194234011123845
+    second: Kailtah_8
+  - first:
+      213: 14200575468479365
+    second: Kailtah_9
+  - first:
+      213: 1074655343362509482
+    second: Kailtah_10
+  - first:
+      213: -7076317576435241054
+    second: Kailtah_11
+  - first:
+      213: -8558560358458454357
+    second: Kailtah_12
+  - first:
+      213: -1403701885022651006
+    second: Kailtah_13
+  - first:
+      213: 6066822482100578202
+    second: Kailtah_14
+  - first:
+      213: -2514950902454372952
+    second: Kailtah_15
+  - first:
+      213: -2938810790389765451
+    second: Kailtah_16
+  - first:
+      213: -8979451962580015316
+    second: Kailtah_17
+  - first:
+      213: -1992737409257494479
+    second: Kailtah_18
+  - first:
+      213: 2729545626473941716
+    second: Kailtah_19
+  - first:
+      213: -2485734002709659529
+    second: Kailtah_20
+  - first:
+      213: -4292476262695984678
+    second: Kailtah_21
+  - first:
+      213: -6423322066107028643
+    second: Kailtah_22
+  - first:
+      213: -2674091690741387713
+    second: Kailtah_23
+  - first:
+      213: 1118346052648350265
+    second: Kailtah_24
+  - first:
+      213: 3881438117501298464
+    second: Kailtah_25
+  - first:
+      213: -2363058967147366332
+    second: Kailtah_26
+  - first:
+      213: 939467157167250115
+    second: Kailtah_27
+  - first:
+      213: -4776508689638204825
+    second: Kailtah_28
+  - first:
+      213: -6891660268358996048
+    second: Kailtah_29
+  - first:
+      213: -8568295928457524984
+    second: Kailtah_30
+  - first:
+      213: 5616803418619793306
+    second: Kailtah_31
+  - first:
+      213: -7996770061247602822
+    second: Kailtah_32
+  - first:
+      213: -566414950673684144
+    second: Kailtah_33
+  - first:
+      213: 5674366701248474731
+    second: Kailtah_34
+  - first:
+      213: 4649663396853552738
+    second: Kailtah_35
+  - first:
+      213: 3427203853271922740
+    second: Kailtah_36
+  - first:
+      213: -480097036347344758
+    second: Kailtah_37
+  - first:
+      213: -3081927531205881561
+    second: Kailtah_38
+  - first:
+      213: -7549080852286449513
+    second: Kailtah_39
+  - first:
+      213: -3678345468447040955
+    second: Kailtah_40
+  - first:
+      213: 3300714729860060796
+    second: Kailtah_41
+  - first:
+      213: -7178235440627653612
+    second: Kailtah_42
+  - first:
+      213: 778631973716608430
+    second: Kailtah_43
+  - first:
+      213: 3637680535432507934
+    second: Kailtah_44
+  - first:
+      213: -4100555787667750633
+    second: Kailtah_45
+  - first:
+      213: 2352968176880375852
+    second: Kailtah_46
+  - first:
+      213: 2630376372762162094
+    second: Kailtah_47
+  - first:
+      213: -2967687565475554054
+    second: Kailtah_48
+  - first:
+      213: -8003141551967008956
+    second: Kailtah_49
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kailtah_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2880
+        width: 960
+        height: 960
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33577d11659404260800000000000000
+      internalID: 7079739248241767731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kailtah_1
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2880
+        width: 960
+        height: 960
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 276402478305f18e0800000000000000
+      internalID: -1720568329235577230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kailtah_2
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2880
+        width: 960
+        height: 960
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2ec98deecf1d4090800000000000000
+      internalID: -8048741985432252886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kailtah_3
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 2880
+        width: 960
+        height: 960
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f277693f59bf50a0800000000000000
+      internalID: -6890585086217456906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kailtah_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 960
+        height: 960
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d459b13ca1013210800000000000000
+      internalID: 1310830805621757137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kailtah_5
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1920
+        width: 960
+        height: 960
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 845b399896e67ca10800000000000000
+      internalID: 1929632364910327112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kailtah_6
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1920
+        width: 960
+        height: 960
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02392d4259c6cb1f0800000000000000
+      internalID: -1027827227123608800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kailtah_7
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1920
+        width: 960
+        height: 960
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 874c275f03d494430800000000000000
+      internalID: 3767627435943838840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kailtah_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 960
+        height: 960
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5800ae123ed242750800000000000000
+      internalID: 6279194234011123845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kailtah_9
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 960
+        width: 960
+        height: 960
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 583a7602953723000800000000000000
+      internalID: 14200575468479365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kailtah_10
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 960
+        width: 960
+        height: 960
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaa091d4751f9ee00800000000000000
+      internalID: 1074655343362509482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kailtah_11
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 960
+        width: 960
+        height: 960
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2af69baf7aedbcd90800000000000000
+      internalID: -7076317576435241054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kailtah_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 960
+        height: 960
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bae085df2b2e93980800000000000000
+      internalID: -8558560358458454357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kailtah_13
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 960
+        height: 960
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28dbdac929c058ce0800000000000000
+      internalID: -1403701885022651006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kailtah_14
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 960
+        height: 960
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9765f077eea13450800000000000000
+      internalID: 6066822482100578202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kailtah_15
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 0
+        width: 960
+        height: 960
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a5b8af9a79191dd0800000000000000
+      internalID: -2514950902454372952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6bac6948ae006124ebce8fd5228cdc43
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":960.0,"y":960.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Kailtah_0: 7079739248241767731
+      Kailtah_1: -1720568329235577230
+      Kailtah_10: 1074655343362509482
+      Kailtah_11: -7076317576435241054
+      Kailtah_12: -8558560358458454357
+      Kailtah_13: -1403701885022651006
+      Kailtah_14: 6066822482100578202
+      Kailtah_15: -2514950902454372952
+      Kailtah_2: -8048741985432252886
+      Kailtah_3: -6890585086217456906
+      Kailtah_4: 1310830805621757137
+      Kailtah_5: 1929632364910327112
+      Kailtah_6: -1027827227123608800
+      Kailtah_7: 3767627435943838840
+      Kailtah_8: 6279194234011123845
+      Kailtah_9: 14200575468479365
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
