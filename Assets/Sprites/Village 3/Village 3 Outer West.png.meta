@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Outer West
+      name: Village 3 Outer West_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4d497a462638a24fa8fe782c5ba2fad
-      internalID: 1750912864
+      spriteID: 1d2fad68ec73c384490493ad629f2660
+      internalID: -1006534175
       vertices: []
       indices: 
       edges: []
@@ -172,8 +172,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b47cda627f234924a859693899187bc3
-      internalID: -1206579917
+      spriteID: 1c0982944c2bb614dbda0ea8f870f14d
+      internalID: -2139943513
       vertices: []
       indices: 
       edges: []
@@ -194,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5ddb06aa35110d429dda9bded23c81e
-      internalID: -1032293623
+      spriteID: 8a1b6e656b174114281666674f82128d
+      internalID: 756847520
       vertices: []
       indices: 
       edges: []
@@ -204,7 +204,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 793b79fa616214c40bdab1bf8bcacd26
+    spriteID: 882055d5d1e906b43a20449c727d697c
     internalID: 0
     vertices: []
     indices: 
@@ -216,10 +216,10 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":2.0},"gridSpriteSize":{"x":960.0,"y":960.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Outer West: -7381625161353175040
-      Village 3 Outer West_1: 1750912864
-      Village 3 Outer West_2: -1206579917
-      Village 3 Outer West_3: -1032293623
+      Village 3 Outer West_0: -7381625161353175040
+      Village 3 Outer West_1: -1006534175
+      Village 3 Outer West_2: -2139943513
+      Village 3 Outer West_3: 756847520
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
