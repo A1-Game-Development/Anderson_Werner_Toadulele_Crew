@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Other Scenes/Title Screen.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/Other Scenes/Home.unity
+    guid: 0ed0de42240fa3c43a75f062ef1d44bf
+  - enabled: 1
     path: Assets/Scenes/Village 3, Anderson/Outer Far West.unity
     guid: d61fde75706ab684bbeac8ef048aca44
   - enabled: 1
@@ -33,14 +36,79 @@ EditorBuildSettings:
     path: Assets/Scenes/Village 3, Anderson/Far South.unity
     guid: 35c0c3108b43d9d49bc8fac41dc1a311
   - enabled: 1
+    path: Assets/Scenes/Village 3, Anderson/South East.unity
+    guid: 7e157fbbfdc1d1d43b2858789827a5cc
+  - enabled: 1
     path: Assets/Scenes/Village 3, Anderson/Inner North.unity
     guid: 16fd100d84f5640409083444913ccd62
   - enabled: 1
     path: Assets/Scenes/Village 3, Anderson/FIVE PEBBLES.unity
     guid: ab5771236b9b90b4eaad0ce0ef55d1de
   - enabled: 1
+    path: Assets/Scenes/Other Scenes/Crossroads.unity
+    guid: dc82c88bd82971f468ce265c7dd3da6c
+  - enabled: 1
+    path: Assets/Scenes/Village 2, Lily/2.1.unity
+    guid: 157925f56648ff94db96a86901d72ee4
+  - enabled: 1
+    path: Assets/Scenes/Village 2, Lily/2.2.unity
+    guid: c5557098503adae4bb65df5124d8a8ee
+  - enabled: 1
+    path: Assets/Scenes/Village 2, Lily/2.3.unity
+    guid: f3f97163de5bc704693739a0ba807ed6
+  - enabled: 1
+    path: Assets/Scenes/Village 2, Lily/2.4.unity
+    guid: 35c51f34f62e27045b63a191261f5d8b
+  - enabled: 1
+    path: Assets/Scenes/Village 2, Lily/2.5.unity
+    guid: 937cbe0197bf7bb40867271ece8062bc
+  - enabled: 1
+    path: Assets/Scenes/Village 4, Kalina/4.1.unity
+    guid: 2595878bb5c40d249b3cb8c9ca08455a
+  - enabled: 1
+    path: Assets/Scenes/Village 4, Kalina/4.2.unity
+    guid: 5bf20f58cc3a4424587d0e41103ba633
+  - enabled: 1
+    path: Assets/Scenes/Village 4, Kalina/4.3.unity
+    guid: f4f83cb2d2b93aa4f8f26c28e34cd069
+  - enabled: 1
+    path: Assets/Scenes/Village 4, Kalina/4.4.unity
+    guid: 792acdc82a782c141b8392dfcb820322
+  - enabled: 1
+    path: Assets/Scenes/Village 4, Kalina/4.5.unity
+    guid: ed38cfee2bf6e9e4f808c130b3056076
+  - enabled: 1
+    path: Assets/Scenes/Village 4, Kalina/4.6.unity
+    guid: 9d24db11bbf918a40b0f777e59402a3a
+  - enabled: 1
+    path: Assets/Scenes/Village 3, Anderson/East.unity
+    guid: d3bc124d07760f34896a34e4af475abe
+  - enabled: 1
+    path: Assets/Scenes/Village 3, Anderson/Outer North.unity
+    guid: e94de0cf1b79da2448b234ce31b917b0
+  - enabled: 1
     path: Assets/Scenes/Other Scenes/Testing.unity
     guid: 5573f4e4a874c2749b091a91dab4a9d2
+  - enabled: 1
+    path: Assets/Scenes/Village 1, Payton/1.1.unity
+    guid: a94b4fbc0855ff54eb0ac229fa8b2c29
+  - enabled: 1
+    path: Assets/Scenes/Village 1, Payton/1.2.unity
+    guid: 41203a484f8f38c4a97f49c77b6a73d0
+  - enabled: 1
+    path: Assets/Scenes/Village 1, Payton/1.3.unity
+    guid: a7a3b4a8e4c030b41a7db17e0211e79e
+  - enabled: 1
+    path: Assets/Scenes/Village 1, Payton/1.4.unity
+    guid: a194f73417d9c314799bd77751872df4
+  - enabled: 1
+    path: Assets/Scenes/Village 1, Payton/1.5.unity
+    guid: 7d97dfd860ad78f4191abcde6fe75c3d
+  - enabled: 1
+    path: Assets/Scenes/Village 1, Payton/1.6.unity
+    guid: 76d30be48ea2b2a47b994d530e114e22
+  - enabled: 1
+    path: Assets/Scenes/Other Scenes/EndingScene.unity
+    guid: e34047836a2851b488b40c3834118457
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  m_UseUCBPForAssetBundles: 0

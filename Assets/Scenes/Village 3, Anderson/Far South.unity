@@ -370,6 +370,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &645451441
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 520095513094027844, guid: 4db19a52858739846b98e1933c8a4798, type: 3}
+      propertyPath: m_Name
+      value: Cermit
+      objectReference: {fileID: 0}
+    - target: {fileID: 789705164191520594, guid: 4db19a52858739846b98e1933c8a4798, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.25946
+      objectReference: {fileID: 0}
+    - target: {fileID: 789705164191520594, guid: 4db19a52858739846b98e1933c8a4798, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.29455
+      objectReference: {fileID: 0}
+    - target: {fileID: 789705164191520594, guid: 4db19a52858739846b98e1933c8a4798, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 789705164191520594, guid: 4db19a52858739846b98e1933c8a4798, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 789705164191520594, guid: 4db19a52858739846b98e1933c8a4798, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 789705164191520594, guid: 4db19a52858739846b98e1933c8a4798, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 789705164191520594, guid: 4db19a52858739846b98e1933c8a4798, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 789705164191520594, guid: 4db19a52858739846b98e1933c8a4798, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 789705164191520594, guid: 4db19a52858739846b98e1933c8a4798, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 789705164191520594, guid: 4db19a52858739846b98e1933c8a4798, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4db19a52858739846b98e1933c8a4798, type: 3}
 --- !u!1001 &921279115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -385,7 +442,7 @@ PrefabInstance:
     - target: {fileID: 2897487571638644726, guid: 4d9cdadff6f069b4baac710616df3f61, type: 3}
       propertyPath: transition
       value: 
-      objectReference: {fileID: 1093767807}
+      objectReference: {fileID: 966864437}
     - target: {fileID: 2897487571638644726, guid: 4d9cdadff6f069b4baac710616df3f61, type: 3}
       propertyPath: nextSceneName
       value: South
@@ -435,6 +492,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d9cdadff6f069b4baac710616df3f61, type: 3}
+--- !u!114 &966864437 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1019401084918890258, guid: 346e522068147a046b365d7106832f56, type: 3}
+  m_PrefabInstance: {fileID: 1093767806}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41c3d6290fa489b4a9cd36921cb6161e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneTransition
 --- !u!1001 &1093767806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -487,22 +555,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4878247189572523577, guid: 346e522068147a046b365d7106832f56, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 346e522068147a046b365d7106832f56, type: 3}
---- !u!114 &1093767807 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 725345314327517723, guid: 346e522068147a046b365d7106832f56, type: 3}
-  m_PrefabInstance: {fileID: 1093767806}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41c3d6290fa489b4a9cd36921cb6161e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SceneTransition
 --- !u!1001 &1101977551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -558,7 +619,11 @@ PrefabInstance:
     - target: {fileID: 4574707882138787471, guid: 88261d0775dc60245acb444fab136295, type: 3}
       propertyPath: transition
       value: 
-      objectReference: {fileID: 1093767807}
+      objectReference: {fileID: 966864437}
+    - target: {fileID: 4574707882138787471, guid: 88261d0775dc60245acb444fab136295, type: 3}
+      propertyPath: nextSceneName
+      value: South East
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -573,3 +638,4 @@ SceneRoots:
   - {fileID: 921279115}
   - {fileID: 1101977551}
   - {fileID: 1093767806}
+  - {fileID: 645451441}
